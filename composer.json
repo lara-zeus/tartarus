@@ -30,8 +30,8 @@
         "calebporzio/sushi": "^2.4",
         "filament/filament": "^3.2",
         "filament/spatie-laravel-translatable-plugin": "^3.2",
-        "lara-zeus/pontus": "*",
-        "lara-zeus/erebus": "*",
+        "lara-zeus/pontus": "^1.x",
+        "lara-zeus/erebus": "^1.x",
         "lara-zeus/chaos": "^1.0",
         "rickdbcn/filament-email": "^1.0",
         "spatie/laravel-tags": "^4.6",
@@ -85,10 +85,6 @@
         {
             "type": "github",
             "url": "git@github.com:still-code/laravel-subscriptions.git"
-        },
-        {
-            "type": "path",
-            "url": "../*"
         }
     ]
 }
