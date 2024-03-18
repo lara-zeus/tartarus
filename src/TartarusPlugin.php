@@ -2,10 +2,10 @@
 
 namespace LaraZeus\Tartarus;
 
-use LaraZeus\Tartarus\Filament\Pages\Deleter;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
+use LaraZeus\Tartarus\Filament\Pages\Deleter;
 
 final class TartarusPlugin implements Plugin
 {
@@ -22,7 +22,7 @@ final class TartarusPlugin implements Plugin
         $panel
             ->discoverClusters(in: __DIR__ . '/Filament/Clusters', for: 'LaraZeus\\Tartarus\\Filament\\Clusters')
             ->pages([
-                Deleter::class
+                Deleter::class,
             ])
             ->resources([
                 //

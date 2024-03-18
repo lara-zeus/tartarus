@@ -2,10 +2,10 @@
 
 namespace LaraZeus\Tartarus\Models;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+use LaraZeus\Chaos\Concerns\ChaosModel;
 use LaraZeus\Tartarus\Enums\TagTypes;
 use LaraZeus\Tartarus\Models\Concerns\ForCompany;
-use LaraZeus\Chaos\Concerns\ChaosModel;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tag extends \Spatie\Tags\Tag
 {
