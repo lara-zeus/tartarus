@@ -46,6 +46,7 @@ class RegisterCompany extends RegisterTenant
         $user = Auth::user();
         $data = $this->form->getState();
 
+        /** @phpstan-ignore-next-line */
         $company = $user?->ownedCompanies()->create([
             'name' => $data['name'],
             'subdomain' => str($data['name'])->slug(),
@@ -53,6 +54,7 @@ class RegisterCompany extends RegisterTenant
 
         session()->put('company', $company);
 
+        /** @phpstan-ignore-next-line */
         $user?->switchCompany($company);
 
         $name = $data['name'];

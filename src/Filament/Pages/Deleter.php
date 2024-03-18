@@ -2,8 +2,6 @@
 
 namespace LaraZeus\Tartarus\Filament\Pages;
 
-use App\Filament\Common\Clusters\System;
-use App\Models\Core\SoftDelete;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Notifications\Notification;
@@ -16,6 +14,8 @@ use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Builder;
+use LaraZeus\Tartarus\Filament\Clusters\System;
+use LaraZeus\Tartarus\Models\SoftDelete;
 
 class Deleter extends Page implements HasTable
 {
@@ -28,7 +28,7 @@ class Deleter extends Page implements HasTable
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'filament.admin.pages.deleter';
+    protected static string $view = 'zeus-tartarus::filament.admin.pages.deleter';
 
     public static function langFile(): string
     {
