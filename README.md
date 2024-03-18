@@ -4,6 +4,16 @@
 
 <h4 align="center">Lara-zeus Tartarus, simple multi tenants with panels</h4>
 
+<p align="center">
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/lara-zeus/tartarus.svg?style=flat-square)](https://packagist.org/packages/lara-zeus/tartarus)
+[![Tests](https://img.shields.io/github/actions/workflow/status/lara-zeus/tartarus/run-tests.yml?label=tests&style=flat-square&branch=main)](https://github.com/lara-zeus/tartarus/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Code Style](https://img.shields.io/github/actions/workflow/status/lara-zeus/tartarus/fix-php-code-style-issues.yml?label=code-style&flat-square)](https://github.com/lara-zeus/tartarus/actions?query=workflow%3Afix-php-code-style-issues+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/lara-zeus/tartarus.svg?style=flat-square)](https://packagist.org/packages/lara-zeus/tartarus)
+[![Total Downloads](https://img.shields.io/github/stars/lara-zeus/tartarus?style=flat-square)](https://github.com/lara-zeus/tartarus)
+
+</p>
+
 ## Support Filament
 
 <a href="https://github.com/sponsors/danharrin">
