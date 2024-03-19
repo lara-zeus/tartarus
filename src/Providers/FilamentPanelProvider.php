@@ -77,7 +77,7 @@ class FilamentPanelProvider
                 MenuItem::make()
                     ->visible(fn () => tenant() !== null)
                     ->label(fn () => __('All Notifications'))
-                    ->icon('carbon-notification')
+                    ->icon('tabler-bell')
                     ->url(static fn () => NotificationResource::getUrl(tenant: tenant())),
             ])
             ->middleware([
