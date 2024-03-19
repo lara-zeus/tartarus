@@ -20,7 +20,7 @@ class SettingsForm
                     TextInput::make('subdomain')
                         ->live()
                         ->extraAttributes(['style' => 'direction: ltr;'])
-                        ->prefixIcon('carbon-link')
+                        ->prefixIcon('tabler-link')
                         ->label(__('Slug')),
                     ViewField::make('primary_color')
                         ->live()
