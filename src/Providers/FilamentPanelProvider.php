@@ -57,13 +57,13 @@ class FilamentPanelProvider
             // plugins
             ->plugins([
                 SpatieLaravelTranslatablePlugin::make()
-                    ->defaultLocales(['ar', 'en']),
+                    ->defaultLocales(config('app.locales')),
             ])
 
             // misc
             ->databaseNotifications()
             ->databaseNotificationsPolling('30s')
-            ->renderHook('panels::user-menu.profile.after', fn (): string => view('zeus-tartarus::hooks.user-menu-lang'))
+            ->renderHook('panels::user-menu.profile.after', fn (): View => view('zeus-tartarus::hooks.user-menu-lang'))
 
             // nav
             ->userMenuItems([
