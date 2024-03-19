@@ -27,5 +27,4 @@ class TartarusServiceProvider extends PackageServiceProvider
     {
         Livewire::component('register-company', RegisterCompany::class);
     }
-
 }
