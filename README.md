@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://larazeus.com"><img src="https://larazeus.com/images/tartarus-banner.png?v=1" /></a>
+<a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-tartarus.png?v=1" /></a>
 </p>
 
 <h4 align="center">Lara-zeus Tartarus, simple multi tenants with panels</h4>
