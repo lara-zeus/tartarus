@@ -24,7 +24,7 @@ class SettingsForm
                         ->label(__('Slug')),
                     ViewField::make('primary_color')
                         ->live()
-                        ->view('filament.fields.color-picker'),
+                        ->view('zeus-tartarus::fields.color-picker'),
                 ]),
         ];
     }

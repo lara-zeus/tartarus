@@ -3,7 +3,7 @@
 use Filament\Facades\Filament;
 
 if (! function_exists('tenant')) {
-    function tenant(?string $key = null): ?LaraZeus\Tartarus\Models\Company
+    function tenant(?string $key = null): mixed
     {
         /**
          * @var \LaraZeus\Tartarus\Models\Company $getTenant

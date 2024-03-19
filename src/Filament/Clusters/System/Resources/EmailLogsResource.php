@@ -23,9 +23,12 @@ use RickDBCN\FilamentEmail\Models\Email;
 
 class EmailLogsResource extends ChaosResource
 {
-    protected static ?string $model = Email::class;
-
     protected static ?string $cluster = System::class;
+
+    public static function getModel(): string
+    {
+        return config('filament-email.resource.model');
+    }
 
     public static function form(Form $form): Form
     {

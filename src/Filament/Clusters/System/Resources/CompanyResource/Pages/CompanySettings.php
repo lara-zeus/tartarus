@@ -26,7 +26,7 @@ class CompanySettings extends Page
 
     protected static string $resource = CompanyResource::class;
 
-    protected static string $view = 'filament.admin.clusters.companies.pages.company-settings';
+    protected static string $view = 'zeus-tartarus::company.pages.company-settings';
 
     public static function langFile(): string
     {

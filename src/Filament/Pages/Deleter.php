@@ -28,7 +28,7 @@ class Deleter extends Page implements HasTable
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'zeus-tartarus::filament.admin.pages.deleter';
+    protected static string $view = 'zeus-tartarus::pages.deleter';
 
     public static function langFile(): string
     {

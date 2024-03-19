@@ -3,6 +3,8 @@
 namespace LaraZeus\Tartarus;
 
 use LaraZeus\Tartarus\Console\InstallCommand;
+use LaraZeus\Tartarus\Filament\Pages\RegisterCompany;
+use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,5 +21,10 @@ class TartarusServiceProvider extends PackageServiceProvider
                 InstallCommand::class,
             ])
             ->hasTranslations();
+    }
+
+    public function packageBooted(): void
+    {
+        Livewire::component('register-company', RegisterCompany::class);
     }
 }
