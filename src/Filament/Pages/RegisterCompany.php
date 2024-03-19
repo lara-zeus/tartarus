@@ -18,6 +18,8 @@ class RegisterCompany extends RegisterTenant
 
     public ?Model $tenant = null;
 
+    protected static ?string $slug = 'create-my-new-team';
+
     protected static string $view = 'zeus-tartarus::company.pages.create_company';
 
     public static function getLabel(): string
