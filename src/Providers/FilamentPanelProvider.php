@@ -10,7 +10,6 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Navigation\MenuItem;
 use Filament\Panel;
 use Filament\SpatieLaravelTranslatablePlugin;
-use Filament\Support\Facades\FilamentIcon;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
@@ -34,16 +33,7 @@ class FilamentPanelProvider
         self::configuringColumns();
         self::configuringComponents();
 
-        FilamentIcon::register([
-            'panels::sidebar.collapse-button' => 'tabler-layout-sidebar-right-collapse-filled',
-            'panels::sidebar.expand-button' => 'tabler-layout-sidebar-left-collapse-filled',
-            'panels::pages.dashboard.navigation-item' => 'tabler-home',
-        ]);
-
         return $panel
-            //->sidebarWidth('200px')
-            //->brandLogoHeight('3rem')
-
             ->renderHook(
                 'panels::footer',
                 fn (): View => view('zeus-tartarus::hooks.footer'),
