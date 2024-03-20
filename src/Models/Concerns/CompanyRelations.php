@@ -5,7 +5,6 @@ namespace LaraZeus\Tartarus\Models\Concerns;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use LaraZeus\Tartarus\Models\CompanyInvitation;
 use LaraZeus\Tartarus\Models\Employeeship;
 use LaraZeus\Tartarus\Models\Settings;
 
@@ -14,11 +13,6 @@ trait CompanyRelations
     public function owner(): BelongsTo
     {
         return $this->belongsTo(config('auth.providers.users.model'), 'user_id');
-    }
-
-    public function companyInvitations(): HasMany
-    {
-        return $this->hasMany(CompanyInvitation::class);
     }
 
     public function users(): BelongsToMany
