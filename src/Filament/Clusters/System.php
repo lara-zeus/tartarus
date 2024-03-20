@@ -3,7 +3,6 @@
 namespace LaraZeus\Tartarus\Filament\Clusters;
 
 use Filament\Clusters\Cluster;
-use Illuminate\Contracts\Support\Htmlable;
 
 class System extends Cluster
 {
