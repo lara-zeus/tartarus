@@ -21,7 +21,6 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use LaraZeus\Erebus\Filament\Clusters\Employees\Resources\NotificationResource;
 use LaraZeus\Erebus\Filament\Pages\UserProfile;
 use LaraZeus\Tartarus\Middleware\SetLang;
 use Livewire\Livewire;
@@ -62,13 +61,6 @@ class FilamentPanelProvider
                     ->label(fn () => __('My Profile'))
                     ->icon('heroicon-o-user-circle')
                     ->url(static fn () => UserProfile::getUrl()),
-
-                // wtf, error in register
-                MenuItem::make()
-                    ->visible(fn () => tenant() !== null)
-                    ->label(fn () => __('All Notifications'))
-                    ->icon('tabler-bell')
-                    ->url(static fn () => NotificationResource::getUrl(tenant: tenant())),
             ])
             ->middleware([
                 EncryptCookies::class,

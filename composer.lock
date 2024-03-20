@@ -2096,16 +2096,16 @@
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kirschbaum-development/eloquent-power-joins.git",
-                "reference": "13feb3692ab6c0475b2c05de131d5f5822fb250a"
+                "reference": "571f09c4b23c349cb1a5db8bb88af291ed30389c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kirschbaum-development/eloquent-power-joins/zipball/13feb3692ab6c0475b2c05de131d5f5822fb250a",
-                "reference": "13feb3692ab6c0475b2c05de131d5f5822fb250a",
+                "url": "https://api.github.com/repos/kirschbaum-development/eloquent-power-joins/zipball/571f09c4b23c349cb1a5db8bb88af291ed30389c",
+                "reference": "571f09c4b23c349cb1a5db8bb88af291ed30389c",
                 "shasum": ""
             },
             "require": {
@@ -2152,9 +2152,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kirschbaum-development/eloquent-power-joins/issues",
-                "source": "https://github.com/kirschbaum-development/eloquent-power-joins/tree/3.5.0"
+                "source": "https://github.com/kirschbaum-development/eloquent-power-joins/tree/3.5.1"
             },
-            "time": "2024-02-13T15:40:14+00:00"
+            "time": "2024-03-19T22:45:47+00:00"
         },
         {
             "name": "lab404/laravel-impersonate",
@@ -2225,16 +2225,16 @@
         },
         {
             "name": "lara-zeus/chaos",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lara-zeus/chaos.git",
-                "reference": "94cbf9a4d49b763eb8de01f05560c7fe27ae6d7c"
+                "reference": "e65418442beff381b551911f13cd73073db3f01b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lara-zeus/chaos/zipball/94cbf9a4d49b763eb8de01f05560c7fe27ae6d7c",
-                "reference": "94cbf9a4d49b763eb8de01f05560c7fe27ae6d7c",
+                "url": "https://api.github.com/repos/lara-zeus/chaos/zipball/e65418442beff381b551911f13cd73073db3f01b",
+                "reference": "e65418442beff381b551911f13cd73073db3f01b",
                 "shasum": ""
             },
             "require": {
@@ -2289,20 +2289,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-12T14:27:00+00:00"
+            "time": "2024-03-20T01:04:07+00:00"
         },
         {
             "name": "lara-zeus/erebus",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lara-zeus/erebus.git",
-                "reference": "22e57a00f344a756eec52a60d19d11a6e26f1fc2"
+                "reference": "6b0c1fad3370403ea0c69e17057abaf3b5d73faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lara-zeus/erebus/zipball/22e57a00f344a756eec52a60d19d11a6e26f1fc2",
-                "reference": "22e57a00f344a756eec52a60d19d11a6e26f1fc2",
+                "url": "https://api.github.com/repos/lara-zeus/erebus/zipball/6b0c1fad3370403ea0c69e17057abaf3b5d73faa",
+                "reference": "6b0c1fad3370403ea0c69e17057abaf3b5d73faa",
                 "shasum": ""
             },
             "require": {
@@ -2379,7 +2379,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-19T15:36:14+00:00"
+            "time": "2024-03-20T01:04:49+00:00"
         },
         {
             "name": "lara-zeus/pontus",
