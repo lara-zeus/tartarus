@@ -30,6 +30,11 @@ class Company extends Model implements HasAvatar, HasCurrentTenantLabel, HasName
     use CompanyRelations;
     use HasTranslations;
 
+    public function getTenantId(): ?string
+    {
+        return auth()->user()?->company_id;
+    }
+
     public array $translatable = ['name'];
 
     public function saveCompanySettings(array $data): void

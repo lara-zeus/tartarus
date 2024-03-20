@@ -14,16 +14,6 @@ class System extends Cluster
         return __('app.System_cluster');
     }
 
-    public function getTitle(): string | Htmlable
-    {
-        return __('app.System_cluster');
-    }
-
-    public function getHeading(): string | Htmlable
-    {
-        return __('app.System_cluster');
-    }
-
     public static function getClusterBreadcrumb(): ?string
     {
         return __('app.System_cluster');
