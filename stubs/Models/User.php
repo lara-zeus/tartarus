@@ -54,7 +54,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasDefaul
         'email_verified_at' => 'datetime',
     ];
 
-    public function canAccessTenant(null|Company|Model $tenant): bool
+    public function canAccessTenant(null | Company | Model $tenant): bool
     {
         return $this->belongsToCompany($tenant);
     }
@@ -77,10 +77,10 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasDefaul
         if (tenant() !== null) {
             $colorName = str(tenant()?->primary_color ?? 'Blue')->title();
             $color = constant("Filament\Support\Colors\Color::$colorName");
-            $bgColor = str(Rgb::fromString('rgb('.$color[500].')')->toHex())->replace('#', '');
+            $bgColor = str(Rgb::fromString('rgb(' . $color[500] . ')')->toHex())->replace('#', '');
         }
 
-        return sprintf('https://ui-avatars.com/api/?name=%s&color=fff&background='.$bgColor, urlencode($name));
+        return sprintf('https://ui-avatars.com/api/?name=%s&color=fff&background=' . $bgColor, urlencode($name));
     }
 
     public function ConnectedAccounts(): HasMany
