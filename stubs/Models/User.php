@@ -40,6 +40,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasDefaul
     use ChaosModel;
     use ForFilament;
     use HasCompanies;
+
     /*use HasPlanSubscriptions;*/
     use HasRoles;
     use HasTranslations;
