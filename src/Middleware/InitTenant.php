@@ -16,7 +16,7 @@ class InitTenant
         $subdomain = $this->makeSubdomain($request->getHost());
 
         if ($subdomain === 'www') {
-            return redirect()->away(config('note.central_domain'));
+            return redirect()->away(config('zeus-tartarus.central_domain'));
         }
         $company = Company::where('subdomain', $subdomain)->first();
 

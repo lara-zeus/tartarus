@@ -16,7 +16,9 @@ class TartarusServiceProvider extends PackageServiceProvider
     {
         $package
             ->name(static::$name)
+            ->hasConfigFile()
             ->hasViews()
+            ->hasMigrations($this->getMigrations())
             ->hasCommands([
                 InstallCommand::class,
             ])
@@ -26,5 +28,16 @@ class TartarusServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         Livewire::component('register-company', RegisterCompany::class);
+    }
+
+    protected function getMigrations(): array
+    {
+        return [
+            'create_companies_table',
+            'create_company_user_table',
+            'create_filament_email_table',
+            'create_settings_table',
+            'create_tag_tables',
+        ];
     }
 }

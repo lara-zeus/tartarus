@@ -50,8 +50,10 @@ class FilamentPanelProvider
             ])
 
             // misc
-            ->databaseNotifications()
-            ->databaseNotificationsPolling('30s')
+            //->databaseNotifications()
+            //->databaseNotificationsPolling('30s')
+
+            // lang switcher
             ->renderHook('panels::user-menu.profile.after', fn (): View => view('zeus-tartarus::hooks.user-menu-lang'))
 
             // nav

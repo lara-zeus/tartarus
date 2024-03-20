@@ -138,7 +138,7 @@ class Company extends Model implements HasAvatar, HasCurrentTenantLabel, HasName
     protected function fullUrl(): Attribute
     {
         return Attribute::make(
-            get: fn () => 'https://' . $this->subdomain . '.' . config('note.central_domain'),
+            get: fn () => 'https://' . $this->subdomain . '.' . config('zeus-tartarus.central_domain'),
         );
     }
 }

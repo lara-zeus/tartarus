@@ -1,6 +1,6 @@
 {
     "name": "lara-zeus/tartarus",
-    "description": "simple multi tenants with panels",
+    "description": "simple multi tenants",
     "keywords": [
         "laravel",
         "lara-zeus",
@@ -31,7 +31,6 @@
         "filament/filament": "^3.2",
         "ryangjchandler/blade-tabler-icons": "^2.3",
         "filament/spatie-laravel-translatable-plugin": "^3.2",
-        "lara-zeus/pontus": "^1.0",
         "lara-zeus/erebus": "^1.0",
         "lara-zeus/chaos": "^1.0",
         "rickdbcn/filament-email": "^1.0",

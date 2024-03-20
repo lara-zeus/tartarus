@@ -1,0 +1,9 @@
+@import url(https://fonts.bunny.net/css?family=amita:400,700|noto-kufi-arabic:100,200,300,400,500,600,700,800,900|ubuntu:300,300i,400,400i,500,500i,700,700i);
+
+[dir=ltr] {
+    font-family: 'Ubuntu', 'Noto Kufi Arabic', sans-serif;
+}
+
+[dir=rtl] {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
