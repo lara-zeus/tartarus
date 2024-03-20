@@ -66,7 +66,7 @@ trait HasCompanies
         return $this->id === $company->{$this->getForeignKey()};
     }
 
-    public function belongsToCompany(?Company $company = null): bool
+    public function belongsToCompany(null | Company | Model $company = null): bool
     {
         if ($company === null) {
             return false;
