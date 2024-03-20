@@ -25,15 +25,31 @@
 
 And more on the way.
 
-## Demo
+## Documentation
 
-> Visit our demo site: https://demo.larazeus.com/admin
+### install
 
+`composer require lara-zeus/tartarus`
 
-## Full Documentation
+## setup
 
-> Visit our website to get the complete documentation: https://larazeus.com/tartarus
+add locales to zeus-tartarus.php
 
+```php
+'locales' => [
+    'en' => ['name' => 'English', 'native' => 'English', 'regional' => 'en_GB', 'flag' => 'gb'],
+],
+```
+### Env:
+
+`CENTRAL_DOMAIN=domain.test`
+
+### config
+
+- filament-logger.php:
+```php
+    'activity_resource' => \LaraZeus\Erebus\Filament\Clusters\Employees\Resources\ActivityResource::class,
+```
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes.

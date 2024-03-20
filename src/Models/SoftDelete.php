@@ -71,7 +71,7 @@ class SoftDelete extends Model
 
     private function runSelect(string $table, ?string $endDate = null): ?int
     {
-        $endDate ??= config('zeus-gaia.delete-before-date');
+        $endDate ??= config('zeus-tartarus.delete-before-date');
         if (Schema::hasColumn($table, 'deleted_at')) {
             return DB::select("SELECT COUNT(1) AS counter FROM {$table} WHERE deleted_at <= '{$endDate}'")[0]->counter;
         }
