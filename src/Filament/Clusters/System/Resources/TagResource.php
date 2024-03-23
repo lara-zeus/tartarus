@@ -5,12 +5,10 @@ namespace LaraZeus\Tartarus\Filament\Clusters\System\Resources;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
-use Filament\Forms\Set;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 use LaraZeus\Chaos\Filament\ChaosResource;
 use LaraZeus\Chaos\Forms\Components\MultiLang;
 use LaraZeus\Tartarus\Filament\Clusters\System;
@@ -40,17 +38,14 @@ class TagResource extends ChaosResource
                         MultiLang::make('name')
                             ->required()
                             ->maxLength(255)
-                            ->label(__(static::langFile() . '.name'))
+                            ->label(__(static::langFile() . '.name')),
+                        /*MultiLang::make('slug')
                             ->live(onBlur: true)
-                            ->afterStateUpdated(function (Set $set, $state) {
-                                $set('slug.' . app()->getLocale(), Str::slug($state[app()->getLocale()]));
-                            }),
-                        MultiLang::make('slug')
-                            ->live(onBlur: true)
+                            ->hidden()
                             ->label(__(static::langFile() . '.slug'))
                             ->unique(ignorable: fn (?Model $record): ?Model => $record)
                             ->required()
-                            ->maxLength(255),
+                            ->maxLength(255),*/
                         Select::make('type')
                             ->label(__(static::langFile() . '.type'))
                             ->columnSpan(2)
