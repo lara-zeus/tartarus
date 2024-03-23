@@ -31,27 +31,21 @@ And more on the way.
 
 ### install
 
-`composer require lara-zeus/tartarus`
 
-## setup
+## Installations:
 
-add locales to zeus-tartarus.php
+- install laravel
+- install filament
+or use the [filament installer](https://github.com/lara-zeus/filament-installer) to install both together
 
-```php
-'locales' => [
-    'en' => ['name' => 'English', 'native' => 'English', 'regional' => 'en_GB', 'flag' => 'gb'],
-],
-```
-### Env:
+- run `composer require lara-zeus/tartarus`
+- run `php artisan tartarus:install `
+- run `php artisan migrate:fresh --seed`
+- `npm i && npm run dev`
+- login: email: `base@base.base` pass: `basebasebase`
 
-`CENTRAL_DOMAIN=domain.test`
 
-### config
 
-- filament-logger.php:
-```php
-    'activity_resource' => \LaraZeus\Erebus\Filament\Clusters\Employees\Resources\ActivityResource::class,
-```
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes.
