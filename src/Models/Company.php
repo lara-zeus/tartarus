@@ -32,6 +32,7 @@ class Company extends Model implements HasAvatar, HasCurrentTenantLabel, HasName
 
     public function getTenantId(): ?string
     {
+        // @phpstan-ignore-next-line
         return auth()->user()?->company_id;
     }
 
@@ -133,9 +134,12 @@ class Company extends Model implements HasAvatar, HasCurrentTenantLabel, HasName
             return mb_substr($segment, 0, 1);
         })->join(' '));
 
-        $colorName = str(tenant()->primary_color ?? 'Blue')->title();
-        $color = constant("Filament\Support\Colors\Color::$colorName");
-        $bgColor = str(Rgb::fromString('rgb(' . $color[500] . ')')->toHex())->replace('#', '');
+        $bgColor = 'BFA577';
+        if (tenant()->primary_color !== null) {
+            $colorName = str(tenant()->primary_color)->title();
+            $color = constant("Filament\Support\Colors\Color::$colorName");
+            $bgColor = str(Rgb::fromString('rgb(' . $color[500] . ')')->toHex())->replace('#', '');
+        }
 
         return sprintf('https://ui-avatars.com/api/?name=%s&color=FFFFFF&background=' . $bgColor, urlencode($name));
     }
