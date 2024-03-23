@@ -12,7 +12,7 @@ trait Configuration
     protected Closure | string $navigationGroupLabel = 'Tartarus';
 
     protected array $tartarusModels = [
-        //'Notification' => \LaraZeus\Tartarus\Models\Notification::class,
+        'Company' => \LaraZeus\Tartarus\Models\Company::class,
     ];
 
     public function navigationGroupLabel(Closure | string $label): static
