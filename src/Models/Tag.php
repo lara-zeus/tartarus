@@ -16,7 +16,7 @@ class Tag extends \Spatie\Tags\Tag
     public function getCasts(): array
     {
         return [
-            'type' => TartarusPlugin::getModel('TagType')
+            'type' => TartarusPlugin::getModel('TagType'),
         ];
     }
 }
