@@ -135,7 +135,7 @@ class Company extends Model implements HasAvatar, HasCurrentTenantLabel, HasName
         })->join(' '));
 
         $bgColor = 'BFA577';
-        if (tenant()->primary_color !== null) {
+        if (tenant()?->primary_color !== null) {
             $colorName = str(tenant()->primary_color)->title();
             $color = constant("Filament\Support\Colors\Color::$colorName");
             $bgColor = str(Rgb::fromString('rgb(' . $color[500] . ')')->toHex())->replace('#', '');

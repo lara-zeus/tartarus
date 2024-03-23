@@ -23,6 +23,8 @@ class CompanyResource extends ChaosResource
 
     protected static ?string $model = Company::class;
 
+    protected static bool $isScopedToTenant = false;
+
     protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
@@ -52,6 +54,7 @@ class CompanyResource extends ChaosResource
 
     public static function table(Table $table): Table
     {
+        // todo who can see what (check for roles)
         return ChaosTables::make(
             static::class,
             $table,

@@ -40,17 +40,14 @@ class TagResource extends ChaosResource
                         MultiLang::make('name')
                             ->required()
                             ->maxLength(255)
-                            ->label(__(static::langFile() . '.name'))
+                            ->label(__(static::langFile() . '.name')),
+                        /*MultiLang::make('slug')
                             ->live(onBlur: true)
-                            ->afterStateUpdated(function (Set $set, $state) {
-                                $set('slug.' . app()->getLocale(), Str::slug($state[app()->getLocale()]));
-                            }),
-                        MultiLang::make('slug')
-                            ->live(onBlur: true)
+                            ->hidden()
                             ->label(__(static::langFile() . '.slug'))
                             ->unique(ignorable: fn (?Model $record): ?Model => $record)
                             ->required()
-                            ->maxLength(255),
+                            ->maxLength(255),*/
                         Select::make('type')
                             ->label(__(static::langFile() . '.type'))
                             ->columnSpan(2)

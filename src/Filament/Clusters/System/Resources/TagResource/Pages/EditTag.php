@@ -8,4 +8,11 @@ use LaraZeus\Tartarus\Filament\Clusters\System\Resources\TagResource;
 class EditTag extends ChaosEditRecord
 {
     protected static string $resource = TagResource::class;
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['slug'] = [];
+
+        return $data;
+    }
 }
