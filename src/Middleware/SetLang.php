@@ -20,7 +20,7 @@ class SetLang
                     }
                 }
 
-                app()->setLocale(session('current_lang', 'ar'));
+                app()->setLocale(session('current_lang', config('app.locale')));
 
                 return $next($request);
             });

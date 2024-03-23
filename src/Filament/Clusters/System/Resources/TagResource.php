@@ -43,9 +43,10 @@ class TagResource extends ChaosResource
                             ->label(__(static::langFile() . '.name'))
                             ->live(onBlur: true)
                             ->afterStateUpdated(function (Set $set, $state) {
-                                $set('slug.ar', Str::slug($state));
+                                $set('slug.' . app()->getLocale(), Str::slug($state[app()->getLocale()]));
                             }),
                         MultiLang::make('slug')
+                            ->live(onBlur: true)
                             ->label(__(static::langFile() . '.slug'))
                             ->unique(ignorable: fn (?Model $record): ?Model => $record)
                             ->required()

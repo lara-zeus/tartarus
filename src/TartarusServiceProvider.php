@@ -3,7 +3,9 @@
 namespace LaraZeus\Tartarus;
 
 use LaraZeus\Tartarus\Console\InstallCommand;
+use LaraZeus\Tartarus\Filament\Pages\Deleter;
 use LaraZeus\Tartarus\Filament\Pages\RegisterCompany;
+use LaraZeus\Tartarus\Filament\Pages\Settings;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -28,6 +30,8 @@ class TartarusServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         Livewire::component('register-company', RegisterCompany::class);
+        Livewire::component('settings', Settings::class);
+        Livewire::component('deleter', Deleter::class);
     }
 
     protected function getMigrations(): array

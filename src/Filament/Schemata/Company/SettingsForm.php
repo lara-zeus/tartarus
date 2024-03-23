@@ -2,9 +2,10 @@
 
 namespace LaraZeus\Tartarus\Filament\Schemata\Company;
 
+use Awcodes\PresetColorPicker\PresetColorPicker;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\ViewField;
+use Filament\Support\Facades\FilamentColor;
 use LaraZeus\Chaos\Forms\Components\MultiLang;
 
 class SettingsForm
@@ -22,9 +23,13 @@ class SettingsForm
                         ->extraAttributes(['style' => 'direction: ltr;'])
                         ->prefixIcon('tabler-link')
                         ->label(__('Slug')),
-                    ViewField::make('primary_color')
-                        ->live()
-                        ->view('zeus-tartarus::fields.color-picker'),
+
+                    PresetColorPicker::make('primary_color')
+                        ->colors(
+                            collect(FilamentColor::getColors())
+                                ->forget(['secondary', 'slate', 'zinc', 'neutral', 'stone'])
+                                ->toArray()
+                        ),
                 ]),
         ];
     }
