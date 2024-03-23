@@ -4,6 +4,8 @@
 
 <h4 align="center">Lara-zeus Tartarus, simple multi tenants with panels</h4>
 
+## ⚠️️️ ⚠️️️ Not ready for production yet! ⚠️️️ ⚠️️️
+
 <p align="center">
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/lara-zeus/tartarus.svg?style=flat-square)](https://packagist.org/packages/lara-zeus/tartarus)
