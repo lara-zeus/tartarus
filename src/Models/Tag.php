@@ -4,8 +4,8 @@ namespace LaraZeus\Tartarus\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use LaraZeus\Chaos\Concerns\ChaosModel;
-use LaraZeus\Tartarus\Enums\TagTypes;
 use LaraZeus\Tartarus\Models\Concerns\ForCompany;
+use LaraZeus\Tartarus\TartarusPlugin;
 
 class Tag extends \Spatie\Tags\Tag
 {
@@ -13,7 +13,10 @@ class Tag extends \Spatie\Tags\Tag
     use ForCompany;
     use SoftDeletes;
 
-    protected $casts = [
-        'type' => TagTypes::class,
-    ];
+    public function getCasts(): array
+    {
+        return [
+            'type' => TartarusPlugin::getModel('TagType')
+        ];
+    }
 }

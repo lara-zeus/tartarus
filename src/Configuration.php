@@ -13,6 +13,7 @@ trait Configuration
 
     protected array $tartarusModels = [
         'Company' => \LaraZeus\Tartarus\Models\Company::class,
+        'TagType' => \LaraZeus\Tartarus\Enums\TagTypes::class,
     ];
 
     public function navigationGroupLabel(Closure | string $label): static

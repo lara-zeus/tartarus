@@ -13,9 +13,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use LaraZeus\Chaos\Filament\ChaosResource;
 use LaraZeus\Chaos\Forms\Components\MultiLang;
-use LaraZeus\Tartarus\Enums\TagTypes;
 use LaraZeus\Tartarus\Filament\Clusters\System;
 use LaraZeus\Tartarus\Filament\Clusters\System\Resources\TagResource\Pages;
+use LaraZeus\Tartarus\TartarusPlugin;
 use Spatie\Tags\Tag;
 
 class TagResource extends ChaosResource
@@ -54,7 +54,7 @@ class TagResource extends ChaosResource
                         Select::make('type')
                             ->label(__(static::langFile() . '.type'))
                             ->columnSpan(2)
-                            ->options(TagTypes::class),
+                            ->options(TartarusPlugin::getModel('TagType')),
                     ]),
             ]
         );
@@ -96,7 +96,7 @@ class TagResource extends ChaosResource
             ],
             filters: [
                 SelectFilter::make('type')
-                    ->options(TagTypes::class)
+                    ->options(TartarusPlugin::getModel('TagType'))
                     ->label(__(static::langFile() . 'type')),
             ]
         );

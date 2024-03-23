@@ -6,9 +6,7 @@ use Filament\Support\Contracts\HasLabel;
 
 enum TagTypes: string implements HasLabel
 {
-    case TestType = 'Test Type';
-
-    case CustomerCategories = 'Customer Categories';
+    case TestType = 'Tag';
 
     public function getLabel(): ?string
     {
