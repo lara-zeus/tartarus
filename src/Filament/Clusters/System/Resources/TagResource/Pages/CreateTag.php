@@ -13,7 +13,7 @@ class CreateTag extends ChaosCreateRecord
     {
         $data['slug'] = json_encode(
             [
-                app()->getLocale() => str($data['name'][app()->getLocale()])->slug()->toString()
+                app()->getLocale() => str($data['name'][app()->getLocale()])->slug()->toString(),
             ]
         );
 
