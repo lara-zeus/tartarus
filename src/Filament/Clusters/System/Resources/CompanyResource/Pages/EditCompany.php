@@ -10,6 +10,11 @@ class EditCompany extends ChaosEditRecord
 {
     protected static string $resource = CompanyResource::class;
 
+    public static function getNavigationLabel(): string
+    {
+        return __('zeus-tartarus::tartarus.edit_company_label');
+    }
+
     protected function getHeaderActions(): array
     {
         return [
