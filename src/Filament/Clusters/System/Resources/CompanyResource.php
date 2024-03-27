@@ -15,6 +15,7 @@ use LaraZeus\Chaos\Filament\ChaosResource\ChaosForms;
 use LaraZeus\Chaos\Filament\ChaosResource\ChaosTables;
 use LaraZeus\Tartarus\Filament\Clusters\System\Resources\CompanyResource\Pages;
 use LaraZeus\Tartarus\Models\Company;
+use LaraZeus\Tartarus\TartarusPlugin;
 use STS\FilamentImpersonate\Tables\Actions\Impersonate;
 
 class CompanyResource extends ChaosResource
@@ -26,6 +27,11 @@ class CompanyResource extends ChaosResource
     protected static bool $isScopedToTenant = false;
 
     protected static ?int $navigationSort = 1;
+
+    public static function getNavigationGroup(): ?string
+    {
+        return TartarusPlugin::get()->getNavigationGroupLabel();
+    }
 
     public static function form(Form $form): Form
     {

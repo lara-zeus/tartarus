@@ -28,10 +28,15 @@ class CompanySettings extends Page
 
     protected static string $view = 'zeus-tartarus::company.pages.company-settings';
 
-    public static function langFile(): string
+    public static function getNavigationLabel(): string
+    {
+        return __('zeus-tartarus::tartarus.company_settings_label');
+    }
+
+    /*public static function langFile(): string
     {
         return 'companies';
-    }
+    }*/
 
     public function mount(int | string $record): void
     {
