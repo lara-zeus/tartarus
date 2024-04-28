@@ -7,7 +7,6 @@ use Filament\Forms\Components\Select;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Navigation\MenuItem;
 use Filament\Panel;
 use Filament\SpatieLaravelTranslatablePlugin;
 use Filament\Tables\Columns\Column;
