@@ -21,7 +21,6 @@ class InstallCommand extends Command
 
         $this->info('publishing migration...');
         $this->call('vendor:publish', ['--tag' => 'zeus-tartarus-migrations']);
-        $this->call('vendor:publish', ['--tag' => 'zeus-erebus-migrations']);
 
         $this->info('publishing stubs files...');
 

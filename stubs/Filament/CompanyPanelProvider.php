@@ -8,7 +8,6 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Widgets;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
-use LaraZeus\Erebus\ErebusPlugin;
 use LaraZeus\Tartarus\Filament\Pages\RegisterCompany;
 use LaraZeus\Tartarus\Filament\Pages\Settings;
 use LaraZeus\Tartarus\Models\Company;
@@ -48,7 +47,6 @@ class CompanyPanelProvider extends PanelProvider
                 \LaraZeus\Tartarus\Middleware\SetTenant::class,
             ], isPersistent: true)
             ->plugins([
-                ErebusPlugin::make(),
                 BreezyCore::make()
                     ->avatarUploadComponent(
                         fn () => FileUpload::make('profile_photo_path')
