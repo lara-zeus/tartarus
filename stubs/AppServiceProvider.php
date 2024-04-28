@@ -17,7 +17,9 @@ class AppServiceProvider extends ServiceProvider
 
         Number::useLocale('en');
         URL::defaults(['domain' => '']);
-        URL::forceScheme('https');
+        if (!$this->app->isLocal()) {
+            URL::forceScheme('https');
+        }
         Model::unguard();
     }
 }
