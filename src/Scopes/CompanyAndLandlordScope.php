@@ -12,6 +12,7 @@ class CompanyAndLandlordScope implements Scope
     {
         $builder
             ->where($model->qualifyColumn('company_id'), tenant('id'))
-            ->orWhere($model->qualifyColumn('company_id'), null);
+            ->orWhere($model->qualifyColumn('company_id'), null)
+            ->orWhere($model->qualifyColumn('company_id'), 0);
     }
 }

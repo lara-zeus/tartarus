@@ -7,7 +7,6 @@ use Filament\Forms\Components\Select;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Navigation\MenuItem;
 use Filament\Panel;
 use Filament\SpatieLaravelTranslatablePlugin;
 use Filament\Tables\Columns\Column;
@@ -21,7 +20,6 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use LaraZeus\Erebus\Filament\Pages\UserProfile;
 use LaraZeus\Tartarus\Middleware\SetLang;
 use Livewire\Livewire;
 
@@ -56,14 +54,6 @@ class FilamentPanelProvider
             // lang switcher
             ->renderHook('panels::user-menu.profile.after', fn (): View => view('zeus-tartarus::hooks.user-menu-lang'))
 
-            // nav
-            ->userMenuItems([
-                MenuItem::make()
-                    ->visible(fn () => tenant() !== null)
-                    ->label(fn () => __('My Profile'))
-                    ->icon('heroicon-o-user-circle')
-                    ->url(static fn () => UserProfile::getUrl()),
-            ])
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,

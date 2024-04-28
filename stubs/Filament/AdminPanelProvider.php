@@ -8,7 +8,6 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Widgets;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
-use LaraZeus\Erebus\ErebusPlugin;
 use LaraZeus\Tartarus\Middleware\SetTenant;
 use LaraZeus\Tartarus\Providers\FilamentPanelProvider;
 use LaraZeus\Tartarus\TartarusPlugin;
@@ -27,7 +26,6 @@ class AdminPanelProvider extends PanelProvider
 
             // plugins
             ->plugins([
-                ErebusPlugin::make(),
                 TartarusPlugin::make(),
                 BreezyCore::make()
                     ->avatarUploadComponent(
