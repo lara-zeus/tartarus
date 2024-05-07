@@ -31,6 +31,11 @@ class Deleter extends Page implements HasTable
 
     protected static string $view = 'zeus-tartarus::pages.deleter';
 
+    public static function canAccess(): bool
+    {
+        return ! in_array(static::class, TartarusPlugin::get()->getDisabledResources());
+    }
+
     public static function getNavigationGroup(): ?string
     {
         return TartarusPlugin::get()->getLabel(__CLASS__);
