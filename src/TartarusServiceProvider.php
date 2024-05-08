@@ -3,7 +3,6 @@
 namespace LaraZeus\Tartarus;
 
 use LaraZeus\Tartarus\Console\InstallCommand;
-use LaraZeus\Tartarus\Filament\Pages\Deleter;
 use LaraZeus\Tartarus\Filament\Pages\RegisterCompany;
 use LaraZeus\Tartarus\Filament\Pages\Settings;
 use Livewire\Livewire;
@@ -31,7 +30,6 @@ class TartarusServiceProvider extends PackageServiceProvider
     {
         Livewire::component('register-company', RegisterCompany::class);
         Livewire::component('settings', Settings::class);
-        Livewire::component('deleter', Deleter::class);
     }
 
     protected function getMigrations(): array
