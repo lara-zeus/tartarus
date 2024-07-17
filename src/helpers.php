@@ -8,7 +8,7 @@ if (! function_exists('tenant')) {
         /**
          * @var \LaraZeus\Tartarus\Models\Company $getTenant
          */
-        $getTenant = Filament::getTenant();
+        $getTenant = Filament::getTenant() ?? session('company') ?? null;
 
         if ($getTenant !== null && $key !== null) {
             return $getTenant->getAttribute($key);
