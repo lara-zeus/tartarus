@@ -23,6 +23,6 @@ trait Configuration
 
     public static function getModel(string $model): string
     {
-        return (new static())::get()->getTartarusModels()[$model];
+        return (new static)::get()->getTartarusModels()[$model];
     }
 }

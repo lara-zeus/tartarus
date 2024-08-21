@@ -17,7 +17,7 @@ class Role extends \Spatie\Permission\Models\Role
 
     public static function bootForCompany(): void
     {
-        static::addGlobalScope(new CompanyAndLandlordScope());
+        static::addGlobalScope(new CompanyAndLandlordScope);
 
         static::creating(function ($model) {
             $model->setAttribute('company_id', tenant('id'));

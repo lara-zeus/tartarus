@@ -15,7 +15,7 @@ trait ForCompany
 
     public static function bootForCompany(): void
     {
-        static::addGlobalScope(new CompanyScope());
+        static::addGlobalScope(new CompanyScope);
 
         static::creating(function ($model) {
             $model->setAttribute('company_id', tenant('id'));
