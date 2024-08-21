@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class InitTenant
 {
-    // identifying the tenant in the frontend
     public function handle(Request $request, Closure $next): Response
     {
         $subdomain = $this->makeSubdomain($request->getHost());
