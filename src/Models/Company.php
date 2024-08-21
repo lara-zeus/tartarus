@@ -105,14 +105,7 @@ class Company extends Model implements HasAvatar, HasCurrentTenantLabel, HasName
     public function getFilamentAvatarUrl(): string
     {
         if ($this->logo !== null) {
-            /** @phpstan-ignore-next-line */
-            $logo = Media::query()
-                ->withoutCompany()
-                ->find($this->logo)
-                ?->path;
-            if ($logo !== null) {
-                return Storage::url($logo);
-            }
+            return Storage::url($this->logo);
         }
 
         return $this->defaultProfilePhotoUrl();

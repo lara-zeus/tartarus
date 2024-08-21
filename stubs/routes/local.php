@@ -21,7 +21,7 @@ return [
 function load($path): array
 {
     $classes = [];
-    foreach ((new \Symfony\Component\Finder\Finder())->in($path)->files() as $className) {
+    foreach ((new \Symfony\Component\Finder\Finder)->in($path)->files() as $className) {
         $classes[] = 'App\\'
             . str_replace(
                 ['/', '.php'],
