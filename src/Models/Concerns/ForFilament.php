@@ -8,17 +8,6 @@ use Illuminate\Support\Collection;
 
 trait ForFilament
 {
-    public function canAccessPanel(Panel $panel): bool
-    {
-        return true;
-
-        /*if ($panel->getId() === 'admin') {
-            return $this->email === 'note@note.note';
-        }
-
-        return true;*/
-    }
-
     public function getTenants(Panel $panel): array | Collection
     {
         return $this->allCompanies();
