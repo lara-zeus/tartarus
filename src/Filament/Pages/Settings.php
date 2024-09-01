@@ -18,12 +18,6 @@ class Settings extends EditTenantProfile
         return $form
             ->schema([
                 ...SettingsForm::mainSetting(),
-                // todo
-                /*CuratorPicker::make('logo')
-                    ->directory(fn ($record) => $record->id . '/logos')
-                    ->label(fn () => __(static::langFile() . '.logo'))
-                    ->buttonLabel(fn () => __(static::langFile() . '.select_logo'))
-                    ->columnSpanFull(),*/
             ]);
     }
 
