@@ -19,7 +19,7 @@
 ## Support Filament
 
 <a href="https://github.com/sponsors/danharrin">
-<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.png">
+<img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.webp">
 </a>
 
 ## features
