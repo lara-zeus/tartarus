@@ -2,9 +2,7 @@
 <a href="https://larazeus.com"><img src="https://larazeus.com/images/lara-zeus-tartarus.webp?v=2" /></a>
 </p>
 
-<h4 align="center">Lara-zeus Tartarus, simple multi tenants with panels</h4>
-
-## ⚠️️️ ⚠️️️ Not ready for production yet! ⚠️️️ ⚠️️️
+<h4 align="center">Lara-zeus Tartarus, opinionated, simple multi tenants with panels</h4>
 
 <p align="center">
 
@@ -22,39 +20,47 @@
 <img alt="filament-logo" src="https://larazeus.com/images/filament-sponsor-banner.webp">
 </a>
 
-## features
+## Features
 - 🔥 built with [filament](https://filamentadmin.com)
+- 🔥 Company Profile
+- 🔥 Company Settings
+- 🔥 Colors per company
+- 🔥 Language switcher
+- 🔥 Scope: CompanyAndLandlord
+- 🔥 Scope: CompanyAndLandlord
+- 🔥 Scope: Company
+- 🔥 Scope: withoutCompany
+- 🔥 `tenant()` helper, to get the active tenant
+- 🔥 all components labels are translatable, just add the file the same as the resource slug:
+    `__('companies.title')`
 
-And more on the way.
-
-## Documentation
-
-### install
-
+## Included Packages:
+- [filament-email](https://github.com/rickdbcn/filament-email)
+- [preset-color-picker](https://github.com/awcodes/preset-color-picker)
+- [chaos](https://github.com/lara-zeus/chaos)
+- [filament-impersonate](https://github.com/stechstudio/filament-impersonate)
 
 ## Installations:
 
 - install laravel
 - install filament
-or use the [filament installer](https://github.com/lara-zeus/filament-installer) to install both together
+or use the [filament installer](https://github.com/lara-zeus/filament-installer) to install both together.
 
 - run `composer require lara-zeus/tartarus`
-- run `php artisan tartarus:install `
+- run `php artisan tartarus:install`
 - run `php artisan migrate:fresh --seed`
 - `npm i && npm run dev`
 - login: email: `base@base.base` pass: `basebasebase`
-
-
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes.
 
 ## Support
+
 available support channels:
 
 * open an issue on [GitHub](https://github.com/lara-zeus/tartarus/issues)
-* Email us using the [contact center](https://larazeus.com/contact-us)
 
 ## Contributing
 

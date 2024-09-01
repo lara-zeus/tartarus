@@ -19,6 +19,7 @@ class CompanyScope implements Scope
     public function extend(Builder $builder): void
     {
         $builder->macro('withoutCompany', function (Builder $builder) {
+            /** @phpstan-ignore-next-line */
             return $builder->withoutGlobalScope($this);
         });
     }
