@@ -81,7 +81,7 @@ class SoftDelete extends Model
 
     private function runDelete(string $table, ?string $endDate = null): void
     {
-        $endDate ??= config('zeus-gaia.delete-before-date');
+        $endDate ??= config('zeus-tartarus.delete-before-date');
 
         DB::delete("DELETE FROM {$table} WHERE deleted_at <= '{$endDate}'");
     }
