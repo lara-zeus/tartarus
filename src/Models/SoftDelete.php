@@ -51,7 +51,7 @@ class SoftDelete extends Model
         if ($tableName === 'all') {
             foreach (Schema::getTables() as $table) {
                 $this->runDelete($table->table, $endDate);
-                //force delete
+                // force delete
                 if (array_key_exists($table->table, $this->forceDelete)) {
                     foreach ($this->forceDelete[$table->table] as $query) {
                         $this->forceDeleteTreeRelation($query);
@@ -60,7 +60,7 @@ class SoftDelete extends Model
             }
         } else {
             $this->runDelete($tableName, $endDate);
-            //force delete
+            // force delete
             if (array_key_exists($tableName, $this->forceDelete)) {
                 foreach ($this->forceDelete[$tableName] as $query) {
                     $this->forceDeleteTreeRelation($query);
@@ -88,7 +88,7 @@ class SoftDelete extends Model
 
     private function forceDeleteTreeRelation(string $table): void
     {
-        //replace table by method name if existed or skip
+        // replace table by method name if existed or skip
         if (method_exists($this, 'get' . $table)) {
             $table = $this->{'get' . $table}();
         }
