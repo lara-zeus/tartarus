@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e957201942fc2392e7d7c2c87afe6e47",
+    "content-hash": "82a41260a7db0d653a1b343878c6abc6",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -4806,26 +4806,26 @@
         },
         {
             "name": "secondnetwork/blade-tabler-icons",
-            "version": "v2.48.0",
+            "version": "v3.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/secondnetwork/blade-tabler-icons.git",
-                "reference": "3e025c28e137126828388310ea45580e5059b60d"
+                "reference": "660b757230dfa68c491dcc767bce71384ab8bade"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/secondnetwork/blade-tabler-icons/zipball/3e025c28e137126828388310ea45580e5059b60d",
-                "reference": "3e025c28e137126828388310ea45580e5059b60d",
+                "url": "https://api.github.com/repos/secondnetwork/blade-tabler-icons/zipball/660b757230dfa68c491dcc767bce71384ab8bade",
+                "reference": "660b757230dfa68c491dcc767bce71384ab8bade",
                 "shasum": ""
             },
             "require": {
-                "blade-ui-kit/blade-icons": "^1.1|^1.5",
-                "illuminate/support": "^8.0|^9.0|^10.0",
-                "php": "^7.4|^8.0"
+                "blade-ui-kit/blade-icons": "^1.8",
+                "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+                "php": "^8.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^6.0|^7.0",
-                "phpunit/phpunit": "^9.0|^10.0"
+                "orchestra/testbench": "^6.0|^7.0|^9.0",
+                "phpunit/phpunit": "^9.0|^10.0|^11.0|^12.0"
             },
             "type": "library",
             "extra": {
@@ -4858,9 +4858,9 @@
             ],
             "support": {
                 "issues": "https://github.com/secondnetwork/blade-tabler-icons/issues",
-                "source": "https://github.com/secondnetwork/blade-tabler-icons/tree/v3.0.0"
+                "source": "https://github.com/secondnetwork/blade-tabler-icons/tree/v3.30.1"
             },
-            "time": "2024-03-12T13:20:56+00:00"
+            "time": "2025-02-19T10:36:52+00:00"
         },
         {
             "name": "spatie/color",
