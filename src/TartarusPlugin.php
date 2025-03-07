@@ -5,11 +5,12 @@ namespace LaraZeus\Tartarus;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
+use LaraZeus\FilamentPluginTools\Concerns\HasModels;
 
 final class TartarusPlugin implements Plugin
 {
-    use Configuration;
     use EvaluatesClosures;
+    use HasModels;
 
     public function getId(): string
     {
