@@ -5,7 +5,7 @@ namespace LaraZeus\Tartarus\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
-use LaraZeus\Tartarus\Models\Company;
+use LaraZeus\Tartarus\TartarusPlugin;
 use Symfony\Component\HttpFoundation\Response;
 
 class InitTenant
@@ -17,7 +17,7 @@ class InitTenant
         if ($subdomain === 'www') {
             return redirect()->away(config('zeus-tartarus.central_domain'));
         }
-        $company = Company::where('subdomain', $subdomain)->first();
+        $company = TartarusPlugin::getModel('Company')::where('subdomain', $subdomain)->first();
 
         abort_if($company === null, 404);
 

@@ -33,6 +33,7 @@
         "filament/filament": "^3.2",
         "filament/spatie-laravel-translatable-plugin": "^3.2",
         "lara-zeus/chaos": "^1.0",
+        "lara-zeus/filament-plugin-tools": "^1.0",
         "rickdbcn/filament-email": "^1.8",
         "secondnetwork/blade-tabler-icons": "^3.0",
         "spatie/laravel-tags": "^4.6",

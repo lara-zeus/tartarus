@@ -10,7 +10,7 @@ use Filament\Pages\Tenancy\RegisterTenant;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use LaraZeus\Chaos\Filament\ChaosResource\ChaosForms;
-use LaraZeus\Tartarus\Models\Company;
+use LaraZeus\Tartarus\TartarusPlugin;
 
 class RegisterCompany extends RegisterTenant
 {
@@ -39,7 +39,7 @@ class RegisterCompany extends RegisterTenant
                     ->required(),
             ]),
         ])
-            ->model(Company::class)
+            ->model(TartarusPlugin::getModel('Company'))
             ->statePath('data');
     }
 

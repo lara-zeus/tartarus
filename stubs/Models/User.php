@@ -18,8 +18,8 @@ use LaraZeus\Chaos\Concerns\ChaosModel;
 use LaraZeus\Tartarus\Models\Company;
 use LaraZeus\Tartarus\Models\Concerns\ForFilament;
 use LaraZeus\Tartarus\Models\Concerns\HasCompanies;
-use LaraZeus\Tartarus\Models\ConnectedAccount;
 use LaraZeus\Tartarus\Models\Employeeship;
+use LaraZeus\Tartarus\TartarusPlugin;
 use Spatie\Color\Rgb;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
@@ -85,7 +85,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasDefaul
 
     public function ConnectedAccounts(): HasMany
     {
-        return $this->hasMany(ConnectedAccount::class);
+        return $this->hasMany(TartarusPlugin::getModel('ConnectedAccount'));
     }
 
     public function company(): BelongsToMany
