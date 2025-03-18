@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Collection;
 use LaraZeus\Tartarus\Models\Company;
-use LaraZeus\Tartarus\Models\Employeeship;
+use LaraZeus\Tartarus\TartarusPlugin;
 
 trait HasCompanies
 {
@@ -21,7 +21,7 @@ trait HasCompanies
     {
         $this->switchCompany(tenant());
 
-        return $this->belongsTo(Company::class, 'current_company_id');
+        return $this->belongsTo(TartarusPlugin::getModel('Company'), 'current_company_id');
     }
 
     public function switchCompany(?Company $company = null): bool
@@ -46,12 +46,12 @@ trait HasCompanies
 
     public function ownedCompanies(): HasMany
     {
-        return $this->hasMany(Company::class);
+        return $this->hasMany(TartarusPlugin::getModel('Company'));
     }
 
     public function companies(): BelongsToMany
     {
-        return $this->belongsToMany(Company::class, Employeeship::class)
+        return $this->belongsToMany(TartarusPlugin::getModel('Company'), TartarusPlugin::getModel('Employeeship'))
             ->withPivot('role')
             ->withTimestamps()
             ->as('employeeship');

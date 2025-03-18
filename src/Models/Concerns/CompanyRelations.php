@@ -5,8 +5,7 @@ namespace LaraZeus\Tartarus\Models\Concerns;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use LaraZeus\Tartarus\Models\Employeeship;
-use LaraZeus\Tartarus\Models\Settings;
+use LaraZeus\Tartarus\TartarusPlugin;
 
 trait CompanyRelations
 {
@@ -17,7 +16,7 @@ trait CompanyRelations
 
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(config('auth.providers.users.model'), Employeeship::class)
+        return $this->belongsToMany(config('auth.providers.users.model'), TartarusPlugin::getModel('Employeeship'))
             ->withPivot('role')
             ->withTimestamps()
             ->as('employeeship');
@@ -30,7 +29,7 @@ trait CompanyRelations
 
     public function settings(): HasMany
     {
-        return $this->hasMany(Settings::class);
+        return $this->hasMany(TartarusPlugin::getModel('Settings'));
     }
 
     public function tags(): HasMany

@@ -3,14 +3,14 @@
 namespace LaraZeus\Tartarus\Models\Concerns;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use LaraZeus\Tartarus\Models\Company;
 use LaraZeus\Tartarus\Scopes\CompanyScope;
+use LaraZeus\Tartarus\TartarusPlugin;
 
 trait ForCompany
 {
     public function company(): BelongsTo
     {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(TartarusPlugin::getModel('Company'));
     }
 
     public static function bootForCompany(): void
