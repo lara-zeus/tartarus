@@ -11,14 +11,8 @@
                 $colors = collect(\Filament\Support\Colors\Color::all())->forget(['slate','zinc','neutral','stone'])->keys()->toArray();
             @endphp
             @foreach($colors as $color)
-                @php
-                    $setColor = \Illuminate\Support\Arr::toCssStyles([
-                        \Filament\Support\get_color_css_variables($color, shades: [500]),
-                    ]);
-                @endphp
                 <a :class="state === '{{ $color }}' ? 'mx-1 ring-gray-500 ring-offset-2 ring-2' : ''"
                    @click="state = '{{ $color }}'"
-                   style="{{ $setColor }}"
                    x-tooltip="{
                         content: '{{ str($color)->title() }}',
                         theme: $store.theme,
