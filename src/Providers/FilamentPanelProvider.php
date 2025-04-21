@@ -11,7 +11,6 @@ use Filament\Panel;
 use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Table;
 use Illuminate\Contracts\View\View;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -20,7 +19,6 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use LaraZeus\Tartarus\Middleware\SetLang;
 use Livewire\Livewire;
 
 class FilamentPanelProvider
