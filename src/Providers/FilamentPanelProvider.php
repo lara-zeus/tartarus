@@ -8,7 +8,6 @@ use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Panel;
-use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Contracts\View\View;
@@ -19,6 +18,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Livewire\Livewire;
 
 class FilamentPanelProvider
@@ -71,8 +71,8 @@ class FilamentPanelProvider
 
     public static function configuringColumns(): void
     {
-//        Table::$defaultDateTimeDisplayFormat = 'Y/m/d - h:i A';
-//        Table::$defaultDateDisplayFormat = 'Y/m/d';
+        //        Table::$defaultDateTimeDisplayFormat = 'Y/m/d - h:i A';
+        //        Table::$defaultDateDisplayFormat = 'Y/m/d';
 
         Column::configureUsing(function (Column $column) {
             $column
