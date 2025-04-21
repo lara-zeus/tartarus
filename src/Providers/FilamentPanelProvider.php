@@ -8,7 +8,7 @@ use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Panel;
-use LaraZeus\SpatieTranslatable\SpatieLaravelTranslatablePlugin;
+use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Table;
@@ -43,7 +43,7 @@ class FilamentPanelProvider
 
             // plugins
             ->plugins([
-                SpatieLaravelTranslatablePlugin::make()
+                SpatieTranslatablePlugin::make()
                     ->defaultLocales(config('app.locales')),
             ])
 
@@ -73,8 +73,8 @@ class FilamentPanelProvider
 
     public static function configuringColumns(): void
     {
-        Table::$defaultDateTimeDisplayFormat = 'Y/m/d - h:i A';
-        Table::$defaultDateDisplayFormat = 'Y/m/d';
+//        Table::$defaultDateTimeDisplayFormat = 'Y/m/d - h:i A';
+//        Table::$defaultDateDisplayFormat = 'Y/m/d';
 
         Column::configureUsing(function (Column $column) {
             $column
