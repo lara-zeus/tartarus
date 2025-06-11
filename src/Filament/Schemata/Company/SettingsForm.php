@@ -14,6 +14,7 @@ class SettingsForm
     {
         return [
             Section::make()
+                ->columnSpanFull()
                 ->schema([
                     MultiLang::make('name')
                         ->live()
