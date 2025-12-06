@@ -1,12 +1,13 @@
 <?php
 
 use Filament\Facades\Filament;
+use LaraZeus\Tartarus\Models\Company;
 
 if (! function_exists('tenant')) {
     function tenant(?string $key = null): mixed
     {
         /**
-         * @var \LaraZeus\Tartarus\Models\Company $getTenant
+         * @var Company $getTenant
          */
         $getTenant = Filament::getTenant() ?? session('company') ?? null;
 
