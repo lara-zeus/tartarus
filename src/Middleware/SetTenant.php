@@ -14,7 +14,7 @@ class SetTenant
     public function handle(Request $request, Closure $next): Response
     {
         /**
-         * @var \LaraZeus\Tartarus\Models\Company $tenant
+         * @var Company $tenant
          */
         $tenant = tenant();
 

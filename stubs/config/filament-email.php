@@ -1,10 +1,13 @@
 <?php
 
+use App\Models\Email;
+use LaraZeus\Tartarus\Filament\Clusters\System\Resources\EmailLogsResource;
+
 return [
 
     'resource' => [
-        'class' => \LaraZeus\Tartarus\Filament\Clusters\System\Resources\EmailLogsResource::class,
-        'model' => \App\Models\Email::class,
+        'class' => EmailLogsResource::class,
+        'model' => Email::class,
         'group' => null,
         'sort' => null,
         'default_sort_column' => 'created_at',

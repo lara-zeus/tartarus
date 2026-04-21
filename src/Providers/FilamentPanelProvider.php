@@ -10,6 +10,7 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Panel;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\ImageColumn;
+use Guava\FilamentIconPicker\Forms\IconPicker;
 use Illuminate\Contracts\View\View;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -95,7 +96,7 @@ class FilamentPanelProvider
 
         Select::configureUsing(function (Select $field) {
             /** @phpstan-ignore-next-line */
-            if (! $field instanceof \Guava\FilamentIconPicker\Forms\IconPicker) {
+            if (! $field instanceof IconPicker) {
                 $field
                     ->searchable()
                     ->preload();
