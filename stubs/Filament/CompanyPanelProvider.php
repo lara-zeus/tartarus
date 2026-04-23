@@ -10,6 +10,7 @@ use Filament\Widgets;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
 use LaraZeus\Tartarus\Filament\Pages\RegisterCompany;
 use LaraZeus\Tartarus\Filament\Pages\Settings;
+use LaraZeus\Tartarus\Middleware\SetTenant;
 use LaraZeus\Tartarus\Models\Company;
 use LaraZeus\Tartarus\Providers\FilamentPanelProvider;
 
@@ -44,7 +45,7 @@ class CompanyPanelProvider extends PanelProvider
                 Widgets\AccountWidget::class,
             ])
             ->tenantMiddleware([
-                \LaraZeus\Tartarus\Middleware\SetTenant::class,
+                SetTenant::class,
             ], isPersistent: true)
             ->plugins([
                 BreezyCore::make()

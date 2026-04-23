@@ -2,6 +2,7 @@
 
 namespace LaraZeus\Tartarus\Models;
 
+use App\Models\User;
 use Filament\Models\Contracts\HasAvatar;
 use Filament\Models\Contracts\HasCurrentTenantLabel;
 use Filament\Models\Contracts\HasName;
@@ -20,9 +21,9 @@ use Spatie\Translatable\HasTranslations;
  * @property string $subdomain
  * @property string $primary_color
  * @property string $name
- * @property \App\Models\User $users
+ * @property User $users
  * @property Settings $settings
- * @property \App\Models\User $owner
+ * @property User $owner
  */
 class Company extends Model implements HasAvatar, HasCurrentTenantLabel, HasName
 {

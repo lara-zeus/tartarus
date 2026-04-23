@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Finder\Finder;
 
 Route::get('langger', function () {
     foreach (load(app_path('Filament')) as $item) {
@@ -21,7 +22,7 @@ return [
 function load($path): array
 {
     $classes = [];
-    foreach ((new \Symfony\Component\Finder\Finder)->in($path)->files() as $className) {
+    foreach ((new Finder)->in($path)->files() as $className) {
         $classes[] = 'App\\'
             . str_replace(
                 ['/', '.php'],
